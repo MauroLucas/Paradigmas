@@ -7,21 +7,36 @@ import java.util.List;
 /**
  * Esta Clase define un metodo basico de logica
  * matematica,sumar 2 numeros
- * @author Mauro
+ * @author Mauro Lucas Pereyra
+ * @version 15/04/2018
  *
  */
 public class Funciones {
 	/**
-	 * metodo que permite sumar dos sumeros pasados
-	 * por parametro
-	 * @param num1 - Valor ingresado por parametro
-	 * @param num2 - Valor ingresado por parametro
+	 * Metodo que permite sumar dos numeros pasados
+	 * por parametro.
+	 * @param num1 - Valor ingresado por parametro.
+	 * @param num2 - Valor ingresado por parametro.
 	 * @return - Retorna la suma de num1 y num2
 	 */
 	public static int sumar(int num1,int num2) {
 		return num1+num2;
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo que permite saber si un año es bisiesto o no es bisiesto.
+	 * @note Un año es bisiesto cuando el mes de febrero tiene 29 dias,
+	 * esto ocurre cada 4 años.
+	 * @param anio - Valor ingreado por parametro de tipo entero.
+	 * @return <ul>
+	 *          <li>true: el año es bisiesto</li>
+	 *          <li>false: el año no es bisiesto</li>
+	 *         </ul>
+	 * 
+	 */
+>>>>>>> Mauro
 	public static boolean esBisiesto(int anio) {
 		boolean bisiesto;
 		if(anio%4==0  && (anio%100!=0 || anio%400==0)) {
@@ -35,21 +50,47 @@ public class Funciones {
 		return bisiesto;
 	}
 	
+<<<<<<< HEAD
+=======
+	/** 
+	 * Metodo para saber el año de una fecha pasada por parametro.
+	 * @param fecha : Valor de tipo GregorianCalendar
+	 * @return año de la fecha.
+	 */
+	
+>>>>>>> Mauro
 	public static int traerAnio(GregorianCalendar fecha) {
 		
 		return fecha.get(Calendar.YEAR);
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo para saber el mes de una fecha pasada por parametro.
+	 * @param fecha : Valor de tipo GregorianCalendar
+	 * @return mes de la fecha.
+	 */
+>>>>>>> Mauro
 	public static int traerMes(GregorianCalendar fecha) {
 		
 		return fecha.get(Calendar.MONTH)+1;
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo para saber el día de una fecha pasada por parametro.
+	 * @param fecha : Valor de tipo GregorianCalendar
+	 * @return día de la fecha.
+	 */
+>>>>>>> Mauro
 	public static int traerDia(GregorianCalendar fecha) {
 		
 		return fecha.get(Calendar.DAY_OF_MONTH);
 	}
 	
+<<<<<<< HEAD
 	public static boolean esFechaValida(int anio,int mes,int dia) {
 		
 		boolean fechavalida=true;
@@ -89,6 +130,79 @@ public class Funciones {
 		
 	}
 public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,int minutos,int segundos) {
+=======
+	/**
+	 * Metodo para saber si una fecha es valida o no es valida.
+	 * @note Una fecha es válida dependiendo de la cantidad de días del mes
+	 * y si es bisiesto o no(en el caso del mes de febrero). 
+	 * @param anio 
+	 * @param mes
+	 * @param dia
+	 * @return <ul>
+	 *          <li>true: si la fecha es válida</li>
+	 *          <li>false: si la fecha no es válida</li>
+	 *         </ul>
+	 */
+	public static boolean esFechaValida(int anio,int mes,int dia) {
+		
+		boolean fechaValida=true;
+	    
+		switch (mes) {
+		
+		case 1:if(dia>31) fechaValida=false;break;
+		case 2:if(dia>28 && !esBisiesto(anio))fechaValida=false;break;
+		case 3:if(dia>31)fechaValida=false; break;
+		case 4:if(dia>30)fechaValida=false; break;
+		case 5:if(dia>31)fechaValida=false; break;
+		case 6:if(dia>30)fechaValida=false; break;
+		case 7:if(dia>31)fechaValida=false; break;
+		case 8:if(dia>31)fechaValida=false; break;
+		case 9:if(dia>30)fechaValida=false; break;
+		case 10:if(dia>31)fechaValida=false; break;
+		case 11:if(dia>30)fechaValida=false; break;
+		case 12:if(dia>31)fechaValida=false; break;
+		default :fechaValida=false;
+		}
+		return fechaValida;
+	}
+	
+	/**
+	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
+	 * de un anio, mes y dia de tipo entero pasados por parametro. 
+	 * @param anio 
+	 * @param mes
+	 * @param dia
+	 * @return fecha 
+	 */
+	
+	public static GregorianCalendar traerFecha(int anio,int mes,int dia) {
+		
+		GregorianCalendar fecha = new GregorianCalendar();
+		if(esFechaValida(anio,mes,dia)) {
+		fecha.set(anio, mes-1, dia);
+		fecha.setTime(fecha.getTime());
+		}
+		else {
+			fecha=null;
+		}
+		
+		return(fecha);
+		
+	}
+	/**
+	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
+	 * de un anio, mes, dia, horas, minutos, segundos de tipo entero 
+	 * pasados por parametro. 
+	 * @param anio 
+	 * @param mes
+	 * @param dia
+	 * @param horas
+	 * @param minutos
+	 * @param segundos
+	 * @return fecha 
+	 */
+	public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,int minutos,int segundos) {
+>>>>>>> Mauro
 		
 		GregorianCalendar resultado = new GregorianCalendar();
 		if(esFechaValida(anio,mes,dia)) {
@@ -102,7 +216,21 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 		return(resultado);
 		
 	}
+<<<<<<< HEAD
 	
+=======
+	/**
+	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
+	 * de un anio, mes, dia, horas, minutos, segundos de tipo entero 
+	 * pasados por parametro. 
+	 * @param anio 
+	 * @param mes
+	 * @param dia
+	 * @param horas
+	 * @param minutos
+	 * @param segundos
+	 * @return fecha 
+>>>>>>> Mauro
 	public static GregorianCalendar traerFecha(String fecha) {
 		
 		GregorianCalendar resultado = new GregorianCalendar();
@@ -121,6 +249,15 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 		return resultado;
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo que recibe un dato de tipo GregorianCalendar y retorna en un String 
+	 * la fecha.
+	 * @param fecha - Valor ingresado por parametro.
+	 * @return dia, mes y año de la fecha.  
+	 */
+>>>>>>> Mauro
 	public static String traerFechaCorta(GregorianCalendar fecha) {
 		String resultado = new String();
 		if(fecha!=null) {
@@ -140,6 +277,15 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 		
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo que recibe un dato de tipo GregorianCalendar y retorna en un String 
+	 * la fecha.
+	 * @param fecha - Valor ingresado por parametro.
+	 * @return segundos, minutos, horas, dia, mes y año  de la fecha.  
+	 */
+>>>>>>> Mauro
 	public static String traerFechaCortaHora(GregorianCalendar fecha) {
 		
 		String resultado = new String();
@@ -230,6 +376,18 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 		resultado=traerDiaDeLaSemana(fecha)+" " + String.valueOf(fecha.get(Calendar.DAY_OF_MONTH)+" de "+ traerMesEnLetras(fecha)+" del "+String.valueOf(fecha.get(Calendar.YEAR)));
 		return resultado;
 	}
+<<<<<<< HEAD
+=======
+	  /**
+     * Metodo para saber si dos fechas son iguales.
+     * @note las fechas van a ser iguales cuando compartan el mismo dia mes y año.
+     * @param fecha - Valor ingresado como parametro
+     * @param fecha1 - Valor ingresado como parametro
+     * @return <ul>
+     *          <li>true : si las fechas son iguales</li>
+     *          <li>false : si las fechas no son iguales</li>
+     */
+>>>>>>> Mauro
 	
 	public static boolean sonFechasIguales(GregorianCalendar fecha,GregorianCalendar fecha1) {
 		
@@ -246,7 +404,21 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 		return resultado;
 	}
 	
+<<<<<<< HEAD
 public static boolean sonFechasHorasIguales(GregorianCalendar fecha,GregorianCalendar fecha1) {
+=======
+	 /**
+     * Metodo para saber si dos fechas y hora son iguales.
+     * @note las fechas van a ser iguales cuando compartan el mismo dia,mes,año y los
+     * mismos segundos minutos y horas.
+     * @param fecha - Valor ingresado como parametro
+     * @param fecha1 - Valor ingresado como parametro
+     * @return <ul>
+     *          <li>true : si las fechas son iguales</li>
+     *          <li>false : si las fechas no son iguales</li>
+     */
+	public static boolean sonFechasHorasIguales(GregorianCalendar fecha,GregorianCalendar fecha1) {
+>>>>>>> Mauro
 		
 		boolean resultado=false;
 		
@@ -292,15 +464,48 @@ public static boolean sonFechasHorasIguales(GregorianCalendar fecha,GregorianCal
 		
 		 return Math.rint(valor*100)/100;
 	}
+<<<<<<< HEAD
 	
+=======
+	/**
+	 * Metodo para saber si un caracter es una numero.
+	 * @param c - Valor ingresado por parametro
+	 * @return <ul>
+	 *          <li>true: si es un numero</li>
+	 *          <li>false: no es un numero</li>
+	 */
+>>>>>>> Mauro
 	public static boolean esNumero(char c) {
 		
 		return (Character.isDigit(c));
 	}
+<<<<<<< HEAD
+=======
+	
+	/**
+	 * Metodo para saber si un caracter es una letra.
+	 * @param c - Valor ingresado por parametro
+	 * @return <ul>
+	 *          <li>true: si es una letra</li>
+	 *          <li>false: no es una letra</li>
+	 */
+>>>>>>> Mauro
 	public static boolean esLetra(char c) {
 		return (Character.isLetter(c));
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo para saber si un String es una cadena
+	 * de numeros.
+	 * @param cadena - Valor ingresado como parametro
+	 * @return <ul>
+	 *          <li>true: es una cadena de numeros</li>
+	 *          <li>false: no es una cadena de numeros</li>
+	 *         </ul>
+	 */
+>>>>>>> Mauro
 	public static boolean esCadenaNros(String cadena) {
 		boolean resultado=true;
 		for(int i=0;i<cadena.length();i++) {
@@ -312,6 +517,18 @@ public static boolean sonFechasHorasIguales(GregorianCalendar fecha,GregorianCal
 		return resultado;
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo para saber si un String es una cadena
+	 * de letras.
+	 * @param cadena - Valor ingresado como parametro
+	 * @return <ul>
+	 *          <li>true: es una cadena de letras</li>
+	 *          <li>false: no es una cadena de letras</li>
+	 *         </ul>
+	 */
+>>>>>>> Mauro
 	public static boolean esCadenaLetras(String cadena) {
 		boolean resultado=true;
 		for(int i=0;i<cadena.length();i++) {
@@ -323,11 +540,27 @@ public static boolean sonFechasHorasIguales(GregorianCalendar fecha,GregorianCal
 		return resultado;
 	}
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo para castear un valor de tipo entero.
+	 * @param n - 
+	 * @return parametro n casteado a double.
+	 */
+>>>>>>> Mauro
 	public static double convertirADouble(int n) {
 		
 		return ((double) n);
 	}
 	
+<<<<<<< HEAD
+=======
+	/**
+	 * Metodo para imprimir una lista de cualquier tipo de dato.
+	 * @param lista 
+	 * @return resultado : lista con los saltos de linea.
+	 */
+>>>>>>> Mauro
 	public static<E> String imprimirLista  (List<E> lista) {
 		String resultado = new String();
 		for(E objeto : lista) {
