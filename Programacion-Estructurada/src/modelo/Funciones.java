@@ -5,8 +5,8 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 /**
- * Esta Clase define un metodo basico de logica
- * matematica,sumar 2 numeros
+ * Esta Clase define varios metodos útiles para
+ * el tratamiento de fechas,caracteres,string,numeros y listas.
  * @author Mauro Lucas Pereyra
  * @version 15/04/2018
  *
@@ -82,9 +82,9 @@ public class Funciones {
 	 * Metodo para saber si una fecha es valida o no es valida.
 	 * @note Una fecha es válida dependiendo de la cantidad de días del mes
 	 * y si es bisiesto o no(en el caso del mes de febrero). 
-	 * @param anio 
-	 * @param mes
-	 * @param dia
+	 * @param anio - Valor ingresado por parametro.
+	 * @param mes - Valor ingresado por parametro.
+	 * @param dia - Valor ingresado por parametro.
 	 * @return <ul>
 	 *          <li>true: si la fecha es válida</li>
 	 *          <li>false: si la fecha no es válida</li>
@@ -116,10 +116,10 @@ public class Funciones {
 	/**
 	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
 	 * de un anio, mes y dia de tipo entero pasados por parametro. 
-	 * @param anio 
-	 * @param mes
-	 * @param dia
-	 * @return fecha 
+	 * @param anio - Valor ingresado por parametro.
+	 * @param mes - Valor ingresado por parametro.
+	 * @param dia- Valor ingresado por parametro.
+	 * @return fecha de tipo GregorianCalendar
 	 */
 	
 	public static GregorianCalendar traerFecha(int anio,int mes,int dia) {
@@ -140,13 +140,13 @@ public class Funciones {
 	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
 	 * de un anio, mes, dia, horas, minutos, segundos de tipo entero 
 	 * pasados por parametro. 
-	 * @param anio 
-	 * @param mes
-	 * @param dia
-	 * @param horas
-	 * @param minutos
-	 * @param segundos
-	 * @return fecha 
+	 * @param anio - Valor ingresado por parametro.
+	 * @param mes - Valor ingresado por parametro.
+	 * @param dia - Valor ingresado por parametro.
+	 * @param horas - Valor ingresado por parametro.
+	 * @param minutos - Valor ingresado por parametro.
+	 * @param segundos - Valor ingresado por parametro.
+	 * @return fecha de tipo GregorianCalendar
 	 */
 	public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,int minutos,int segundos) {
 		
@@ -166,13 +166,13 @@ public class Funciones {
 	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
 	 * de String pasado por parametro.
 	 * @note DD/MM/AA
-	 * @param anio 
-	 * @param mes
-	 * @param dia
-	 * @param horas
-	 * @param minutos
-	 * @param segundos
-	 * @return fecha 
+	 * @param anio - Valor ingresado por parametro.
+	 * @param mes - Valor ingresado por parametro.
+	 * @param dia - Valor ingresado por parametro.
+	 * @param horas - Valor ingresado por parametro.
+	 * @param minutos - Valor ingresado por parametro.
+	 * @param segundos - Valor ingresado por parametro.
+	 * @return fecha de tipo GregorianCalendar
 	 */
 	public static GregorianCalendar traerFecha(String fecha) {
 		
