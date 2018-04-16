@@ -4,7 +4,7 @@ import java.util.GregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * Clase para el testeo de la clase main
+ * Clase para el testeo de la clase Funciones
  * @author Mauro Lucas Pereyra
  * @version 16/04/2018
  *
