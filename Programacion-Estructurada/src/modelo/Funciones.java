@@ -560,7 +560,7 @@ public class Funciones {
 
 	/**
 	 * Metodo para castear un valor de tipo entero.
-	 * @param n - 
+	 * @param n - Valor de tipo int
 	 * @return parametro n casteado a double.
 	 */
 
@@ -573,7 +573,7 @@ public class Funciones {
 	/**
 	 * Metodo que recibe una lista de tipo generico y retorna un String
 	 * con las posiciones de la lista y un salto de linea
-	 * @param lista -Parametro generico.
+	 * @param lista - Parametro generico.
 	 * @return resultado : lista con los saltos de linea.
 	 */
 
