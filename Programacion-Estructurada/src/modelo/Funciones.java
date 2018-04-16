@@ -84,38 +84,7 @@ public class Funciones {
 		return fecha.get(Calendar.DAY_OF_MONTH);
 	}
 	
-	/**
-	 * Metodo para saber si la fecha ingresada por parametro es valida en el sistema.
-	 * @param anio : valor de tipo int
-	 * @param mes : valor de tipo int
-	 * @param dia : valor de tipo int
-	 * @return<ul>
-	 *          <li>true: la fecha es valida</li>
-	 *          <li>false: la fecha no es valida</li>
-	 *         </ul>
-	 */
-	public static boolean esFechaValida(int anio,int mes,int dia) {
-		
-		boolean fechavalida=true;
-	    
-		switch (mes) {
-		
-		case 1:if(dia>31) fechavalida=false;break;
-		case 2:if(dia>28 && !esBisiesto(anio))fechavalida=false;break;
-		case 3:if(dia>31)fechavalida=false; break;
-		case 4:if(dia>30)fechavalida=false; break;
-		case 5:if(dia>31)fechavalida=false; break;
-		case 6:if(dia>30)fechavalida=false; break;
-		case 7:if(dia>31)fechavalida=false; break;
-		case 8:if(dia>31)fechavalida=false; break;
-		case 9:if(dia>30)fechavalida=false; break;
-		case 10:if(dia>31)fechavalida=false; break;
-		case 11:if(dia>30)fechavalida=false; break;
-		case 12:if(dia>31)fechavalida=false; break;
-		default :fechavalida=false;
-		}
-		return fechavalida;
-	}
+	
 	
 	/**
 	 * Metodo que genera un objeto GregorianCalendar con el dia, mes y anio ingresados por parametro.
@@ -139,7 +108,7 @@ public class Funciones {
 		return(resultado);
 		
 	}
-public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,int minutos,int segundos) {
+
 
 	/**
 	 * Metodo para saber si una fecha es valida o no es valida.
@@ -176,29 +145,7 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 		return fechaValida;
 	}
 	
-	/**
-	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
-	 * de un anio, mes y dia de tipo entero pasados por parametro. 
-	 * @param anio - Valor ingresado por parametro.
-	 * @param mes - Valor ingresado por parametro.
-	 * @param dia- Valor ingresado por parametro.
-	 * @return fecha de tipo GregorianCalendar
-	 */
 	
-	public static GregorianCalendar traerFecha(int anio,int mes,int dia) {
-		
-		GregorianCalendar fecha = new GregorianCalendar();
-		if(esFechaValida(anio,mes,dia)) {
-		fecha.set(anio, mes-1, dia);
-		fecha.setTime(fecha.getTime());
-		}
-		else {
-			fecha=null;
-		}
-		
-		return(fecha);
-		
-	}
 	/**
 	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
 	 * de un anio, mes, dia, horas, minutos, segundos de tipo entero 
@@ -233,26 +180,14 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
 	 * de String pasado por parametro.
 	 * @note DD/MM/AA
-<<<<<<< HEAD
-	 * @param anio 
-	 * @param mes
-	 * @param dia
-	 * @param horas
-	 * @param minutos
-	 * @param segundos
-	 * @return fecha 
-<<<<<<< HEAD
->>>>>>> Mauro
-=======
-=======
-	 * @param anio - Valor ingresado por parametro.
+     * @param anio - Valor ingresado por parametro.
 	 * @param mes - Valor ingresado por parametro.
 	 * @param dia - Valor ingresado por parametro.
 	 * @param horas - Valor ingresado por parametro.
 	 * @param minutos - Valor ingresado por parametro.
 	 * @param segundos - Valor ingresado por parametro.
 	 * @return fecha de tipo GregorianCalendar
->>>>>>> Mauro
+
 	 */
 
 	public static GregorianCalendar traerFecha(String fecha) {
@@ -369,7 +304,17 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 	/**
 	 * Metodo que trae el nombre del dia de la semana de la fecha ingresada como parametro.
 	 * @param fecha : valor de tipo GregorianCalendar
-	 * @return String con el nombre del dia
+	 * @return String con el nombre del dia. </br>
+	 * <ol>
+	 * <li>Lunes</li>
+	 * <li>Martes</li>
+	 * <li>Miercoles</li>
+	 * <li>Jueves</li>
+	 * <li>Viernes</li>
+	 * <li>Sabado</li>
+	 * <li>Domingo</li>
+	 * </ol>
+	 *                                     
 	 */
 	
 	public static String traerDiaDeLaSemana(GregorianCalendar fecha) {
@@ -394,7 +339,20 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 	/**
 	 * Metodo que trae el nombre del mes de la fecha ingresada como parametro.
 	 * @param fecha : valor de tipo GregorianCalendar
-	 * @return String con el nombre del mes
+	 * @return String con el nombre del mes </br>
+	 * <ol>
+	 * <li>Enero</li>
+	 * <li>Febrero</li>
+	 * <li>Marzo</li>
+	 * <li>Abril</li>
+	 * <li>Mayo</li>
+	 * <li>Junio</li>
+	 * <li>Julio</li>
+	 * <li>Agosto</li>
+	 * <li>Septiembre</li>
+	 * <li>Octubre</li>
+	 * <li>Noviembre</li>
+	 * <li>Diciembre</li>
 	 */
 	
 	public static String traerMesEnLetras(GregorianCalendar fecha) {
