@@ -221,8 +221,8 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 =======
 	/**
 	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
-	 * de un anio, mes, dia, horas, minutos, segundos de tipo entero 
-	 * pasados por parametro. 
+	 * de String pasado por parametro.
+	 * @note DD/MM/AA
 	 * @param anio 
 	 * @param mes
 	 * @param dia
@@ -230,6 +230,10 @@ public static GregorianCalendar traerFecha(int anio,int mes,int dia,int horas,in
 	 * @param minutos
 	 * @param segundos
 	 * @return fecha 
+<<<<<<< HEAD
+>>>>>>> Mauro
+=======
+	 */
 >>>>>>> Mauro
 	public static GregorianCalendar traerFecha(String fecha) {
 		
@@ -556,8 +560,9 @@ public static boolean sonFechasHorasIguales(GregorianCalendar fecha,GregorianCal
 <<<<<<< HEAD
 =======
 	/**
-	 * Metodo para imprimir una lista de cualquier tipo de dato.
-	 * @param lista 
+	 * Metodo que recibe una lista de tipo generico y retorna un String
+	 * con las posiciones de la lista y un salto de linea
+	 * @param lista -Parametro generico.
 	 * @return resultado : lista con los saltos de linea.
 	 */
 >>>>>>> Mauro
