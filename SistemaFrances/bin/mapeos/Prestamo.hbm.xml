@@ -14,7 +14,7 @@
 		
 			<many-to-one name="cliente" class="datos.Cliente" column="idCliente" not-null="true"/>
 			
-		<set name="cuotas" table="cuota"  cascade="all" inverse="true" lazy="true" fetch="select">
+		<set name="cuotas" table="cuota"  order-by="nroCuota asc" cascade="all" inverse="true" lazy="true" fetch="select">
 			<key column="idPrestamo" not-null="true"/>
 			<one-to-many class="datos.Cuota"/>
 		</set>

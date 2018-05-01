@@ -2,8 +2,7 @@ package datos;
 
 import java.util.GregorianCalendar;
 import funciones.Funciones;
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Set;
 
 public class Prestamo {
 	
@@ -13,7 +12,7 @@ public class Prestamo {
 	private double interes;
 	private int cantCuotas;
 	private Cliente cliente;
-	private List<Cuota> cuotas;
+	private Set<Cuota> cuotas;
 	
 	public Prestamo(){}
 
@@ -24,7 +23,6 @@ public class Prestamo {
 		this.interes = interes;
 		this.cantCuotas = cantCuotas;
 		this.cliente = cliente;
-		this.cuotas = new ArrayList<Cuota>();
 		setCuotas();
 	}
 
@@ -82,12 +80,14 @@ public class Prestamo {
 		return prestamo;
 		}
 
-	public List<Cuota> getCuotas() {
+	public Set<Cuota> getCuotas() {
 		return cuotas;
 	}
 
 	public void setCuotas() {
 		int i=1;
+		double saldo=0;
+		GregorianCalendar vencimiento=new GregorianCalendar();
 		for(i=1;i<=cantCuotas;i++){
 			Cuota c=new Cuota();
 			c.setNroCuota(i);
@@ -99,7 +99,8 @@ public class Prestamo {
 				c.setCuota(c.getAmortizacion()+c.getInteresCuota());
 				c.setDeuda(c.getSaldoPendiente()-c.getAmortizacion());
 				c.setSaldoPendiente(c.getSaldoPendiente()-c.getAmortizacion());
-				GregorianCalendar vencimiento=Funciones.traerFechaProximo(fecha,Funciones.traerCantDiasDeUnMes(fecha.YEAR,fecha.MONTH+2));
+				saldo=c.getSaldoPendiente();
+				vencimiento=Funciones.traerFechaProximo(fecha,Funciones.traerCantDiasDeUnMes(fecha.YEAR,fecha.MONTH+2));
 				if(Funciones.esDiaHabil(vencimiento)){
 					c.setFechaVencimiento(vencimiento);
 				}
@@ -111,13 +112,13 @@ public class Prestamo {
 				}
 			}
 			else{
-				c.setSaldoPendiente(cuotas.get(cuotas.size()-1).getSaldoPendiente());
+				c.setSaldoPendiente(saldo);
 				c.setAmortizacion((c.getSaldoPendiente()*interes)/(Math.pow((1+interes),cantCuotas-1)-1));
 				c.setInteresCuota(c.getSaldoPendiente()*interes);
 				c.setCuota(c.getAmortizacion()+c.getInteresCuota());
 				c.setDeuda(c.getSaldoPendiente()-c.getAmortizacion());
 				c.setSaldoPendiente(c.getSaldoPendiente()-c.getAmortizacion());
-				GregorianCalendar vencimiento=Funciones.traerFechaProximo(cuotas.get(cuotas.size()-1).getFechaVencimiento(),Funciones.traerCantDiasDeUnMes(fecha.YEAR,fecha.MONTH+2));
+				vencimiento=Funciones.traerFechaProximo(vencimiento,Funciones.traerCantDiasDeUnMes(fecha.YEAR,fecha.MONTH+2));
 				if(Funciones.esDiaHabil(vencimiento)){
 					c.setFechaVencimiento(vencimiento);
 				}
@@ -128,6 +129,7 @@ public class Prestamo {
 					c.setFechaVencimiento(vencimiento);
 				}
 			}
+			c.setPrestamo(this);
 			cuotas.add(c);
 		}
 	}

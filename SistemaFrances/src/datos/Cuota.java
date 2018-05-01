@@ -15,11 +15,12 @@ public class Cuota {
 	private boolean cancelada;
 	private GregorianCalendar fechaDePago;
 	private double punitorios;
+	private Prestamo prestamo;
 	
 	public Cuota(){}
 	
 	public Cuota(int nroCuota, GregorianCalendar fechaVencimiento, double saldoPendiente, double amortizacion,
-			double interesCuota, double cuota, double deuda) {
+			double interesCuota, double cuota, double deuda, Prestamo prestamo) {
 		super();
 		this.nroCuota = nroCuota;
 		this.fechaVencimiento = fechaVencimiento;
@@ -28,6 +29,7 @@ public class Cuota {
 		this.interesCuota = interesCuota;
 		this.cuota = cuota;
 		this.deuda = deuda;
+		this.prestamo = prestamo;
 	}
 	
 	
@@ -118,6 +120,14 @@ public class Cuota {
 
 	public void setPunitorios(double punitorios) {
 		this.punitorios = punitorios;
+	}
+
+	public Prestamo getPrestamo() {
+		return prestamo;
+	}
+
+	public void setPrestamo(Prestamo prestamo) {
+		this.prestamo = prestamo;
 	}
 
 	@Override
