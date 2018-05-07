@@ -9,7 +9,7 @@
 		</id>
 		<property column="evento" name="evento" type="string"/>
 		<property column="fecha" name="fecha" type="calendar"/>
-		<set table="eventosxcliente" name="clientes" outer-join="true">
+		<set table="eventoxcliente" name="clientes" outer-join="true">
 			<key column="idEvento"/>
 		<many-to-many column="idCliente" class="datos.Cliente"/>
 		</set>
