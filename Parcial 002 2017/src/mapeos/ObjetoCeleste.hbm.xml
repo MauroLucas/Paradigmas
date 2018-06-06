@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd//hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="datos.ObjetoCeleste" table="objetoceleste">
+<id column="idObjetoCeleste" name="idObjetoCeleste">
+<generator class="identity"/>
+</id>
+<property column="objetoCeleste" name="objetoCeleste" type="string"></property>
+<property column="tipo" name="tipo" type="string"></property>
+<property column="clase" name="clase" type="string"></property>
+<property column="magnitud" name="magnitud" type="float"></property>
+<property column="constelacion" name="constelacion" type="string"></property>
+<property column="ascensionRecta" name="ascensionRecta" type="float"></property>
+<property column="declinacion" name="declinacion" type="float"></property>
+</class>
+
+
+
+</hibernate-mapping>
