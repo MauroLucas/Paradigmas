@@ -1,6 +1,0 @@
-11:29:19,925 I: (ErlangCore.java:63) : Starting CORE Thread[Worker-5,5,main]
-11:29:19,947 I: (ErlangCore.java:73) : *** starting Erlide v0.54.0.201803300918~0.54.0.201803211709 (model api=0.54.0.201803211709) (kernel=?~0.115.1.201707181335) *** (Cp1252)
-11:29:19,958 I: (ErlangCore.java:80) : Started CORE
-11:29:19,964 F: (ErlangPlugin.java:89) : Core started
-12:43:28,191 F: (OtpNodeProxy.java:316) : Runtime e1996_jose_dc161f_erlide@192.168.1.146 stopping
-12:43:28,263 F: (OtpNodeProxy.java:272) : Runtime e1996_jose_dc161f_erlide@192.168.1.146 terminated
