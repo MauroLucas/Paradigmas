@@ -12,7 +12,7 @@ import java.util.List;
 public class TestFunciones {
 
 	/**
-	 * Metodo princial
+	 * Método princial
 	 * @param args - Array de String
 	 */
 	public static void main(String[] args) {

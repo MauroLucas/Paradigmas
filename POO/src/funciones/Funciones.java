@@ -3,7 +3,6 @@ package funciones;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Esta Clase define varios metodos útiles para
@@ -14,7 +13,7 @@ import java.util.Set;
  */
 public class Funciones {
 	/**
-	 * Metodo que permite sumar dos numeros pasados
+	 * Método que permite sumar dos numeros pasados
 	 * por parametro.
 	 * @param num1 - Valor ingresado por parametro.
 	 * @param num2 - Valor ingresado por parametro.
@@ -26,7 +25,7 @@ public class Funciones {
 	
 
 	/**
-	 * Metodo que permite saber si un año es bisiesto o no es bisiesto.
+	 * Método que permite saber si un año es bisiesto o no es bisiesto.
 	 * @note Un año es bisiesto cuando el mes de febrero tiene 29 dias,
 	 * esto ocurre cada 4 años.
 	 * @param anio - Valor ingreado por parametro de tipo entero.
@@ -51,7 +50,7 @@ public class Funciones {
 	}
 	
 	/** 
-	 * Metodo para saber el año de una fecha pasada por parametro.
+	 * Método para saber el año de una fecha pasada por parametro.
 	 * @param fecha : Valor de tipo GregorianCalendar
 	 * @return año de la fecha.
 	 */
@@ -63,7 +62,7 @@ public class Funciones {
 	}
 
 	/**
-	 * Metodo para saber el mes de una fecha pasada por parametro.
+	 * Método para saber el mes de una fecha pasada por parametro.
 	 * @param fecha : Valor de tipo GregorianCalendar
 	 * @return mes de la fecha.
 	 */
@@ -75,7 +74,7 @@ public class Funciones {
 	
 
 	/**
-	 * Metodo para saber el día de una fecha pasada por parametro.
+	 * Método para saber el día de una fecha pasada por parametro.
 	 * @param fecha : Valor de tipo GregorianCalendar
 	 * @return día de la fecha.
 	 */
@@ -88,7 +87,7 @@ public class Funciones {
 	
 	
 	/**
-	 * Metodo que genera un objeto GregorianCalendar con el dia, mes y anio ingresados por parametro.
+	 * Método que genera un objeto GregorianCalendar con el dia, mes y anio ingresados por parametro.
 	 * @param anio : valor de tipo int
 	 * @param mes : valor de tipo int
 	 * @param dia : valor de tipo int
@@ -112,7 +111,7 @@ public class Funciones {
 
 
 	/**
-	 * Metodo para saber si una fecha es valida o no es valida.
+	 * Método para saber si una fecha es valida o no es valida.
 	 * @note Una fecha es válida dependiendo de la cantidad de días del mes
 	 * y si es bisiesto o no(en el caso del mes de febrero). 
 	 * @param anio - Valor ingresado por parametro.
@@ -148,7 +147,7 @@ public class Funciones {
 	
 	
 	/**
-	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
+	 * Método para crear una fecha de tipo GregorianCalendar a partir
 	 * de un anio, mes, dia, horas, minutos, segundos de tipo entero 
 	 * pasados por parametro. 
 	 * @param anio - Valor ingresado por parametro.
@@ -178,7 +177,7 @@ public class Funciones {
 	
 
 	/**
-	 * Metodo para crear una fecha de tipo GregorianCalendar a partir
+	 * Método para crear una fecha de tipo GregorianCalendar a partir
 	 * de String pasado por parametro.
 	 * @note DD/MM/AA
      * @param anio - Valor ingresado por parametro.
@@ -211,7 +210,7 @@ public class Funciones {
 	
 
 	/**
-	 * Metodo que recibe un dato de tipo GregorianCalendar y retorna en un String 
+	 * Método que recibe un dato de tipo GregorianCalendar y retorna en un String 
 	 * la fecha.
 	 * @param fecha - Valor ingresado por parametro.
 	 * @return dia, mes y año de la fecha.  
@@ -237,7 +236,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que recibe un dato de tipo GregorianCalendar y retorna en un String 
+	 * Método que recibe un dato de tipo GregorianCalendar y retorna en un String 
 	 * la fecha.
 	 * @param fecha - Valor ingresado por parametro.
 	 * @return segundos, minutos, horas, dia, mes y año  de la fecha.  
@@ -266,7 +265,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que trae un objeto GregorianCalendar con la cantidad de dias ingresada por parametro,
+	 * Método que trae un objeto GregorianCalendar con la cantidad de dias ingresada por parametro,
 	 * sumada a la fecha GregorianCalendar que ingresa junto con esta.
 	 * @param fecha : valor tipo GregorianCalendar
 	 * @param cantdias : valor tipo int
@@ -286,7 +285,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que determina si una fecha es un dia habil o no (Dias habiles: Lunes, Martes, Miercoles, Jueves, Viernes)
+	 * Método que determina si una fecha es un dia habil o no (Dias habiles: Lunes, Martes, Miercoles, Jueves, Viernes)
 	 * @param fecha : valor de tipo GregorianCalendar
 	 * @return <ul>
 	 *          <li>true: el dia es habil</li>
@@ -303,7 +302,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que trae el nombre del dia de la semana de la fecha ingresada como parametro.
+	 * Método que trae el nombre del dia de la semana de la fecha ingresada como parametro.
 	 * @param fecha : valor de tipo GregorianCalendar
 	 * @return String con el nombre del dia. </br>
 	 * <ol>
@@ -338,7 +337,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que trae el nombre del mes de la fecha ingresada como parametro.
+	 * Método que trae el nombre del mes de la fecha ingresada como parametro.
 	 * @param fecha : valor de tipo GregorianCalendar
 	 * @return String con el nombre del mes </br>
 	 * <ol>
@@ -379,7 +378,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que trae como String la fecha ingresada como parametro (Formato: dia numero de mes del anio)
+	 * Método que trae como String la fecha ingresada como parametro (Formato: dia numero de mes del anio)
 	 * @param fecha : valor de tipo GregorianCalendar
 	 * @return String con el formato de la fecha
 	 */
@@ -392,7 +391,7 @@ public class Funciones {
 	}
 
 	  /**
-     * Metodo para saber si dos fechas son iguales.
+     * Método para saber si dos fechas son iguales.
      * @note las fechas van a ser iguales cuando compartan el mismo dia mes y año.
      * @param fecha - Valor ingresado como parametro
      * @param fecha1 - Valor ingresado como parametro
@@ -418,7 +417,7 @@ public class Funciones {
 	}
 	
 	 /**
-     * Metodo para saber si dos fechas y hora son iguales.
+     * Método para saber si dos fechas y hora son iguales.
      * @note las fechas van a ser iguales cuando compartan el mismo dia,mes,año y los
      * mismos segundos minutos y horas.
      * @param fecha - Valor ingresado como parametro
@@ -450,7 +449,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que trae la cantidad de dias que tiene un mes en determinado año.
+	 * Método que trae la cantidad de dias que tiene un mes en determinado año.
 	 * @param anio : valor de tipo int
 	 * @param mes : valor de tipo int
 	 * @return numero de dias que tiene el mes
@@ -478,7 +477,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo que formatea numero decimal a un maximo de 2 decimales
+	 * Método que formatea numero decimal a un maximo de 2 decimales
 	 * @param valor : double a formatear
 	 * @return numero con 2 decimales
 	 */
@@ -489,7 +488,7 @@ public class Funciones {
 	}
 
 	/**
-	 * Metodo para saber si un caracter es una numero.
+	 * Método para saber si un caracter es una numero.
 	 * @param c - Valor ingresado por parametro
 	 * @return <ul>
 	 *          <li>true: si es un numero</li>
@@ -504,7 +503,7 @@ public class Funciones {
 
 	
 	/**
-	 * Metodo para saber si un caracter es una letra.
+	 * Método para saber si un caracter es una letra.
 	 * @param c - Valor ingresado por parametro
 	 * @return <ul>
 	 *          <li>true: si es una letra</li>
@@ -516,7 +515,7 @@ public class Funciones {
 	}
 	
 	/**
-	 * Metodo para saber si un String es una cadena
+	 * Método para saber si un String es una cadena
 	 * de numeros.
 	 * @param cadena - Valor ingresado como parametro
 	 * @return <ul>
@@ -538,7 +537,7 @@ public class Funciones {
 	
 
 	/**
-	 * Metodo para saber si un String es una cadena
+	 * Método para saber si un String es una cadena
 	 * de letras.
 	 * @param cadena - Valor ingresado como parametro
 	 * @return <ul>
@@ -560,7 +559,7 @@ public class Funciones {
 
 
 	/**
-	 * Metodo para castear un valor de tipo entero.
+	 * Método para castear un valor de tipo entero.
 	 * @param n - Valor de tipo int
 	 * @return parametro n casteado a double.
 	 */
@@ -572,7 +571,7 @@ public class Funciones {
 	
 
 	/**
-	 * Metodo que recibe una lista de tipo generico y retorna un String
+	 * Método que recibe una lista de tipo generico y retorna un String
 	 * con las posiciones de la lista y un salto de linea
 	 * @param lista - Parametro generico.
 	 * @return resultado : lista con los saltos de linea.
@@ -586,12 +585,4 @@ public class Funciones {
 		return resultado;
 
   }
-	
-	public static<E> String imprimirLista  (Set<E> lista) {
-		String resultado = new String();
-		for(E objeto : lista) {
-			resultado += objeto.toString() + "\n";
-		}
-		return resultado;
-	}
 }

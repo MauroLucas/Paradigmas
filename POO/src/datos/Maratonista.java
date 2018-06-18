@@ -23,11 +23,11 @@ public class Maratonista {
 	private int nroChip;
 	private LocalTime tiempo;
 	/**
-	 * Metodo Constructor de la Clase
+	 * Método Constructor de la Clase
 	 */
 	public Maratonista() {}
 	/**
-	 * Metodo Constructor de la Clase
+	 * Método Constructor de la Clase
 	 * @param apellido - Valor ingresado por parametro.
 	 * @param nombres - Valor ingresado por parametro.
 	 * @param dni - Valor ingresado por parametro.
@@ -49,14 +49,14 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para ingresar el id 
+	 * Método para ingresar el id 
 	 * @param idMaratonista - Valor ingresado por parametro.
 	 */
 	protected void setIdMaratonista(int idMaratonista) {
 		this.idMaratonista = idMaratonista;
 	}
 	/**
-	 * Metodo para obtener el id 
+	 * Método para obtener el id 
 	 * @return idMaratonista - Retorna el id 
 	 */
 	
@@ -66,7 +66,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para obtener el apellido
+	 * Método para obtener el apellido
 	 * @return - Retorna el apellido
 	 */
 	public String getApellido() {
@@ -75,7 +75,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para ingresar el apellido
+	 * Método para ingresar el apellido
 	 * @param apellido - Valor ingresado por parametro.
 	 */
 	public void setApellido(String apellido) {
@@ -84,7 +84,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para obtener los nombres
+	 * Método para obtener los nombres
 	 * @return nombres - Retorna los nombres
 	 */
 	public String getNombres() {
@@ -93,7 +93,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para ingresar lso nombres
+	 * Método para ingresar lso nombres
 	 * @param nombres - Valor ingresado por parametro.
 	 */
 	public void setNombres(String nombres) {
@@ -102,7 +102,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para obtener el dni
+	 * Método para obtener el dni
 	 * @return dni - Retorna el dni
 	 */
 	public int getDni() {
@@ -110,7 +110,7 @@ public class Maratonista {
 	}
 
 	/**
-	 * Metodo para ingresar el dni
+	 * Método para ingresar el dni
 	 * @param dni - Valor ingresado por parametro.
 	 */
 	public void setDni(int dni) {
@@ -119,7 +119,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para obtener el sexo
+	 * Método para obtener el sexo
 	 * @return sexo - Retorna el sexo
 	 */
 	public char getSexo() {
@@ -127,7 +127,7 @@ public class Maratonista {
 	}
 
 	/**
-	 * Metodo para ingresar el sexo
+	 * Método para ingresar el sexo
 	 * @param sexo - Valor ingresado por parametro.
 	 */
 
@@ -137,7 +137,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para obtener el Numero de Chip
+	 * Método para obtener el Numero de Chip
 	 * @return nroChip - Retorna el Numero de Chip
 	 */
 	public int getNroChip() {
@@ -145,7 +145,7 @@ public class Maratonista {
 	}
 
 	/**
-	 * Metodo para ingresar el Numero de Chip
+	 * Método para ingresar el Numero de Chip
 	 * @param nroChip - Valor ingresado por parametro.
 	 */
 
@@ -155,7 +155,7 @@ public class Maratonista {
 
 
 	/**
-	 * Metodo para obtener el tiempo que tardó de inicio a fin
+	 * Método para obtener el tiempo que tardó de inicio a fin
 	 * @return tiempo - Retorna el tiempo que tardó de inicio a fin
 	 */
 	public LocalTime getTiempo() {
@@ -163,7 +163,7 @@ public class Maratonista {
 	}
 
 	/**
-	 * Metodo para ingresar el tiempo
+	 * Método para ingresar el tiempo
 	 * @param tiempo - Valor ingresado por parametro.
 	 */
 
@@ -172,7 +172,7 @@ public class Maratonista {
 	}
 	
 	/**
-	 * Metodo para ingresar el tiempo que tardó
+	 * Método para ingresar el tiempo que tardó
 	 * de inicio a fin
 	 * @param ini - Valor ingresado por parametro.
 	 * @param fin - Valor ingresado por parametro.
@@ -188,7 +188,7 @@ public class Maratonista {
 	}
 
 	/**
-	 * Metodo para mostrar la informacion del Maratonista
+	 * Método para mostrar la informacion del Maratonista
 	 * @return String - Informacion del Maratonista
 	 */
 
