@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+	"http://www.hibernate.org/dtd//hibernate-mapping-3.0.dtd" >
+	
+<hibernate-mapping>
+	<class name="datos.Marca" table="marca">
+	<id column="idMarca" name="idMarca">
+	<generator class="identity"/>
+	</id>
+	<property column="hora" name="hora" type="LocalTime"></property>
+	<many-to-one name="maratonista" column="idMaratonista"  class="datos.Maratonista" ></many-to-one>
+	</class>
+</hibernate-mapping>
